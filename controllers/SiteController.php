@@ -64,6 +64,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $send = '';
         if($_POST){
            $send = \Yii::$app->mailer->compose()
 
@@ -78,10 +79,9 @@ class SiteController extends Controller
                 ->setHtmlBody($_POST['message'])
 
                 ->send();
-            //var_dump($send);
         }
-
-        return $this->render('index');
+        $successMail = $send == true ? 'Mail successfully sended': '';
+        return $this->render('index',['successMail' => $successMail]);
     }
 
     /**

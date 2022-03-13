@@ -23,6 +23,9 @@ $this->title = 'Ye. Sokolov - Personal Site';
                 <h1 class="cover-heading">Coming Soon</h1>
                 <p class="lead cover-copy">Site in development now</p>
                 <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Contact</button></p>
+                <?php
+                    echo $successMail;
+                ?>
             </div>
             <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
