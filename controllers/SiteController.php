@@ -4,11 +4,14 @@ namespace app\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Html;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\widgets\ActiveForm;
+
 
 class SiteController extends Controller
 {
@@ -61,6 +64,24 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        if($_POST){
+            var_dump($_POST);
+           $send = \Yii::$app->mailer->compose()
+
+                ->setFrom('evgeniy.sokolov01@gmail.com')
+
+                ->setTo($_POST['email'])
+
+                ->setSubject($_POST['theme'])
+
+                ->setTextBody($_POST['message'])
+
+                ->setHtmlBody($_POST['message'])
+
+                ->send();
+            var_dump($send);
+        }
+
         return $this->render('index');
     }
 
