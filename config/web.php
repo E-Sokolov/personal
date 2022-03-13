@@ -13,7 +13,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => getenv('COOKIE_VALIDATION'),
+            'cookieValidationKey' => env('COOKIE_VALIDATION'),
             'enableCsrfValidation' => false,
             'enableCookieValidation' => false
         ],
@@ -33,8 +33,8 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => getenv('MAIL_USER'),
-                'password' => getenv('MAIL_PASSWORD'),
+                'username' => env('MAIL_USER'),
+                'password' => env('MAIL_PASSWORD'),
                 'port' => '587',
                 'encryption' => 'tls'
             ]
