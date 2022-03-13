@@ -14,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'ljcVJjA0lZssvY8p4BOOdXCN56fO-QBK',
+            'cookieValidationKey' => getenv('COOKIE_VALIDATION'),
             'enableCsrfValidation' => false
         ],
         'cache' => [
