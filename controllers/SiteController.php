@@ -65,10 +65,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
         if($_POST){
-            //var_dump($_POST);
            $send = \Yii::$app->mailer->compose()
 
-                ->setFrom('admin@ye-sokolov.name')
+                ->setFrom('evgeniy.sokolov01@gmail.com')
 
                 ->setTo($_POST['email'])
 
