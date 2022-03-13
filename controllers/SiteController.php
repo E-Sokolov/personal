@@ -65,10 +65,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         if($_POST){
-            var_dump($_POST);
+            //var_dump($_POST);
            $send = \Yii::$app->mailer->compose()
 
-                ->setFrom('evgeniy.sokolov01@gmail.com')
+                ->setFrom('admin@ye-sokolov.name')
 
                 ->setTo($_POST['email'])
 
@@ -79,7 +79,7 @@ class SiteController extends Controller
                 ->setHtmlBody($_POST['message'])
 
                 ->send();
-            var_dump($send);
+            //var_dump($send);
         }
 
         return $this->render('index');
