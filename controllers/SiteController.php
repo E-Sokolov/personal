@@ -64,8 +64,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $ss = env('MAIL_USER');
-        var_dump($ss);
         $send = '';
         if($_POST){
            $send = \Yii::$app->mailer->compose()
