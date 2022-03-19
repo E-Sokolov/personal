@@ -34,7 +34,7 @@ class GpsController extends Controller
     }
     public function actionParseKmzFile()
     {
-        $data = file_get_contents("/home/ev/Downloads/ssh.kmz"); // get kmz file
+        $data = file_get_contents("/mnt/nextcloud/ssh.kmz"); // get kmz file
         file_put_contents("/tmp/kmz_temp", $data); // put content to temp dir
         // unzip kmz
         ob_start();
