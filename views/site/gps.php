@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'Ye. Sokolov - Personal Site';
+$this->title = 'GPS - Ye. Sokolov';
 ?>
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
@@ -21,12 +21,9 @@ $this->title = 'Ye. Sokolov - Personal Site';
                 </div>
             </div>
             <div class="inner cover">
-                <h1 class="cover-heading">Coming Soon</h1>
-                <p class="lead cover-copy">Site in development now</p>
+                <h1 class="cover-heading">Fucking Shit</h1>
+                <p class="lead cover-copy"></p>
                 <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Contact</button></p>
-                <?php
-                    echo $successMail;
-                ?>
             </div>
             <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -38,7 +35,7 @@ $this->title = 'Ye. Sokolov - Personal Site';
                             </button>
                         </div>
                         <div class="modal-body">
-                           <form method="post" action="">
+                            <form method="post" action="">
 
                                 <div class="form-group">
                                     <label for="recipient-name" class="form-control-label">Your Email</label>
@@ -51,7 +48,7 @@ $this->title = 'Ye. Sokolov - Personal Site';
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-default">Send</button>
                                 </div>
-                           </form>
+                            </form>
                         </div>
 
                     </div>

@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\widgets\ActiveForm;
+use app\models\Gps;
 
 
 class SiteController extends Controller
@@ -144,5 +145,9 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionGps()
+    {
+        return $this->render('gps');
     }
 }
